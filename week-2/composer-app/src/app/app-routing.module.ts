@@ -14,6 +14,10 @@ import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: ComposerListComponent
+  },
+  {
     path: 'composer-list',
     component: ComposerListComponent
   },
