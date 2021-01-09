@@ -15,10 +15,14 @@
 
 <div class="container">
   <br><br>
-    <!-- This variable can be found in the app.component.ts file -->
+  <!-- This variable can be found in the app.component.ts file -->
   <h2>{{ assignment }}</h2>
   <br><br>
-  <div class="row">
+  <!-- Ngif is checking the value of isLoggedIn.
+    Else ShowError goes to ng-template
+    Variable is found in found in app.component.ts-->
+  <div class="row" *ngIf="isLoggedIn; else showError">
+    <!-- This is a two column-->
     <div class="col-sm-4">
       <!-- this will display the left side of the column
     with an image from my-image.component.html  -->
@@ -30,4 +34,13 @@
       <app-my-details></app-my-details>
     </div>
   </div>
+    <!-- Template that shows dynamically based on the content value if isLoggedIn
+    This tells Angular when showError is called to show the  whats in the ng-template-->
+    <ng-template #showError>
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="alert alert-danger">You are not authorized to view this content</h4>
+        </div>
+      </div>
+    </ng-template>
 </div>

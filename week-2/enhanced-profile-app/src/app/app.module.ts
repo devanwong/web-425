@@ -1,11 +1,9 @@
-/*
-============================================
-; Title: Exercise 1.5
-; Author: Devan Wong
-; Date: 18 December 2020
-; Description: App component
-;===========================================
-*/
+/**
+ * Title: app.module.ts
+ * Author: Devan Wong
+ * Date: 8 January 2020
+ * Description: App Module
+ */
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
