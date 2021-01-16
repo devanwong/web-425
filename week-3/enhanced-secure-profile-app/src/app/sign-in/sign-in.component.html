@@ -1,0 +1,27 @@
+<!-- This is the sign-in component page -->
+<!-- This is going to be a bootstrap form -->
+<div class="card sign-in-container">
+  <div class="card-body">
+    <!-- This is the sign in title -->
+    <h3 class="card-title">Sign In</h3>
+    <!-- This is the beginning of the form -->
+    <form class="card-text">
+      <!-- This represents the fields & labels that we are using -->
+      <div class="form-group">
+        <!-- This is where you see your username in the form -->
+        <label for="txtUserName">Username</label>
+        <input type="text" class="form-control" id="txtUserName" placeholder="Enter your Username">
+      </div>
+      <!-- This is where you see your password in the form -->
+      <div class="form-group">
+        <label for="txtPassword">Password</label>
+        <input type="password" class="form-control" id="txtPassword" placeholder="Enter your Password">
+      </div>
+      <!-- This is where the submit button is-->
+      <div class="form-group">
+        <!-- This requires an onclick event which includes () and inside you pass a function that is defined in your typescript file in the signin component -->
+        <button class="btn btn-primary float-right" (click)="signin()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

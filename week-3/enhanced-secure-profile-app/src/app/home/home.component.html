@@ -1,0 +1,35 @@
+<!-- This is the home component page -->
+<!-- This is a navbar to show the Home About and Contact Us Links -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <br><br>
+  <!-- This variable can be found in the app.component.ts file -->
+  <h2>Exercise 3.3 - Passing Data to Routes Part 2</h2>
+  <br><br>
+  <div class="row">
+    <!-- This is a two column-->
+    <div class="col-sm-4">
+    <!-- this will display the left side of the column
+    with an image from my-image.component.html  -->
+      <app-my-image></app-my-image>
+    </div>
+    <div class="col-sm-8">
+      <!-- this is display an unordered list on the right side column
+      from my-details.component.html -->
+      <app-my-details></app-my-details>
+    </div>
+  </div>
+</div>
