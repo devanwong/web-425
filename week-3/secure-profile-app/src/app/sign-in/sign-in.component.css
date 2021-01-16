@@ -1,0 +1,8 @@
+/* This is the CSS for the sign-in css page */
+
+/* This is the container for the signin form */
+.sign-in-container {
+ width: 35%;
+ margin: 0 auto;
+ margin-top: 10%;
+}
