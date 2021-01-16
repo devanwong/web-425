@@ -12,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
+// This is the class.
 export class AboutComponent implements OnInit {
 
   constructor() { }

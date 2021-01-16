@@ -16,25 +16,30 @@ import { ComposerDetailsComponent } from './composer-details/composer-details.co
 
 const routes: Routes = [
   {
+    // http://localhost:4200/
     path: '',
     component: ComposerListComponent,
     // pathMatch: 'full' means, that the whole URL path needs to match and is consumed by the route matching algorithm.
     pathMatch: 'full'
   },
   {
+    // http://localhost:4200/composer-list
     path: 'composer-list',
     component: ComposerListComponent
   },
   {
+    // http://localhost:4200/:composerId
     // :composerId is a placeholder for the value we pass in the route
     path: 'composer-details/:composerId',
     component: ComposerDetailsComponent
   },
   {
+    // http://localhost:4200/about
     path: 'about',
     component: AboutComponent
   },
   {
+    // http://localhost:4200/contact
     path: 'contact',
     component: ContactComponent
   }
