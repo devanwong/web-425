@@ -16,5 +16,5 @@ import { Component } from '@angular/core';
 })
 // The title has been updated to the current assignment.
 export class AppComponent {
-  assignment: string = 'Exercise 4.4 - Async Pipe';
+  title = 'Enhanced Composer App';
 }
