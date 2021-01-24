@@ -40,7 +40,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false, //this was changed to false 1.23 for ng deploy --base-href=enterprise-composer-app to work
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
