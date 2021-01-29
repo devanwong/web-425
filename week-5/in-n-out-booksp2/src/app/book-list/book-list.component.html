@@ -1,0 +1,60 @@
+<!-- This is the book-list component.html page  -->
+<div fxLayout="column wrap">
+  <!-- This is the title name of the page. -->
+  <h2 fxFlex class="green">
+    Top 5 Favorite Books
+  </h2>
+  <!-- This is the data table from Angular Material.  -->
+  <table fxFlex mat-table [dataSource]="books" class="mat-elevation-z8">
+    <!-- Table rows for the header -->
+    <tr mat-header-row *matHeaderRowDef="header"></tr>
+    <!-- Table rows for array that we created in the booklist-component -->
+    <tr mat-row *matRowDef="let row; columns: header;"></tr>
+    <!-- This is the build of our table and each table has a definition with a corresponding asterisk directive that relates back to what we are calling  -->
+    <!-- Properties are referencing the header arrays from the book-list-componentpage -->
+
+    <!-- THIS IS FOR ISBN -->
+    <ng-container matColumnDef="isbn">
+      <!-- This is going to print out the ISBN number -->
+      <th mat-header-cell *matHeaderCellDef>ISBN</th>
+      <td mat-cell *matCellDef="let element">
+        <!-- This is going to show the showBookDetails -->
+        <!-- This has an onclickhandler -->
+        <a class="a-link blue" (click)="showBookDetails(element.isbn)">{{ element.isbn }}</a>
+      </td>
+    </ng-container>
+
+    <!-- THIS IS FOR TITLE -->
+    <ng-container matColumnDef="title">
+      <!-- This is going to print out the TITLE number -->
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <!-- let element is a placeholder a specific loop that is a part of the array -->
+      <td mat-cell *matCellDef="let element">
+        <!-- This is going to show the showBookDetails -->
+          {{ element.title }}
+      </td>
+    </ng-container>
+
+    <!-- THIS IS FOR NUMBER OF PAGES -->
+    <ng-container matColumnDef="numOfPages">
+      <!-- This is going to print out the numOfPages number -->
+      <th mat-header-cell *matHeaderCellDef>Number of Pages</th>
+      <!-- let element is a placeholder a specific loop that is a part of the array -->
+      <td mat-cell *matCellDef="let element">
+        <!-- This is going to show the showBookDetails -->
+          {{ element.numOfPages }}
+      </td>
+    </ng-container>
+
+        <!-- THIS IS FOR AUTHORS -->
+        <ng-container matColumnDef="author">
+          <!-- This is going to print out the AUTHORS number -->
+          <th mat-header-cell *matHeaderCellDef>Authors</th>
+          <!-- let element is a placeholder a specific loop that is a part of the array -->
+          <td mat-cell *matCellDef="let element">
+            <!-- Converting the array of authors, so authors are comma "delimited" strings  -->
+            {{ element.author.join(', ')}}
+          </td>
+        </ng-container>
+  </table>
+</div>
