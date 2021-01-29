@@ -1,0 +1,40 @@
+<!-- This is the contact component.html page  -->
+<div fxLayout="row wrap">
+  <!-- Left Column -->
+  <!-- fxFlex was imported through FlexLayoutModule declared in app.module.ts  -->
+  <div fxFlex>
+    <mat-card class="mat-elevation-z0">
+    <!-- mat-card-title & mat-card-content was imported through MatCardModule declared in app.module.ts & mat-icon was imported through MatIconModule declared in app.module.ts-->
+    <mat-card-title class="card-title-icon">
+      <!-- This will output an actual icon -->
+      <mat-icon color="primary">navigation</mat-icon>
+    </mat-card-title>
+      <br/>
+    <mat-card-content class="align-center">
+      <p>123 Bridgerton Ave</p>
+      <p>New York, New York</p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+  <!-- Right Column -->
+  <!-- fxFlex was imported through FlexLayoutModule declared in app.module.ts  -->
+  <div fxFlex>
+    <mat-card class="mat-elevation-z0">
+      <!-- mat-card-title & mat-card-content was imported through MatCardModule declared in app.module.ts & mat-icon was imported through MatIconModule declared in app.module.ts-->
+      <mat-card-title class="card-title-icon">
+        <!-- This will output an actual icon -->
+        <mat-icon color="primary">phone</mat-icon>
+      </mat-card-title>
+        <br/>
+        <mat-card-content class="align-center">
+          <p>Direct: 123-123-1234</p>
+        </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<br /><br /><br /><br />
+<div fxLayout="column">
+    <p style="text-align: center">
+      If the number doesn't work please contact Julia per <a class="attribution-link" href="mailto:alert@waxcreative.com?Question-from-JuliaQuinn.com">email</a>.
+    </p>
+</div>
