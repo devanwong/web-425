@@ -1,0 +1,23 @@
+<!-- This is the book-details html page -->
+<mat-card>
+<!-- This is what the header is going to display - The book title.  -->
+  <mat-card-title class="blue">
+    {{ book.title }}
+  </mat-card-title>
+</mat-card>
+<br /><br />
+<!-- This is where the main content is going to be display
+  ISBN, DESCRIPTION AND AUTHORS.  -->
+<mat-card-content>
+  <div fxLayout="column" class="book-details">
+    <p>ISBN: {{book.isbn}}</p>
+    <p>Description:<br /> {{ book.description }}</p>
+    <p>Authors: <br /> {{ book.author.join(', ') }}</p>
+  </div>
+</mat-card-content>
+<!-- mat-card-actions will only show when an ISBN number is selected -->
+<!-- This is the button that will create a null and disappear when pressed.  -->
+<mat-card-actions align="end">
+  <!-- matDialogClose accepts a value as a result for the dialog.  -->
+  <button mat-raised-button color="accent" matDialogClose="confirm">OK</button>
+</mat-card-actions>

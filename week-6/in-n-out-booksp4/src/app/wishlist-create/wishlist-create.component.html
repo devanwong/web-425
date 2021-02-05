@@ -1,0 +1,21 @@
+<!-- This is for the wishlist-create.component.html file -->
+
+<!-- This is creating a form  -->
+<form fxLayout="column" class="wishlist-create-form">
+  <!-- Mat form for the title -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <!-- ngmodel is used to capture the values of the form when its called from the event  -->
+    <input type="text" name="title" matInput [(ngModel)]="item.title" />
+  </mat-form-field>
+  <!-- Mat form for the authors -->
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+      <!-- ngmodel is used to capture the values of the form when its called from the event  -->
+      <input type="text" name="authors" matInput [(ngModel)]="item.authors" />
+  </mat-form-field>
+   <!-- Button for the submit form -->
+   <!-- This is going to handle the submission -->
+   <!-- Click event from additem() from the wishlist-component page -->
+  <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>
