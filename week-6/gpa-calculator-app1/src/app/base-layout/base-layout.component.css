@@ -1,0 +1,12 @@
+/* This is the CSS file for the base-layout html */
+
+/* This changes the logo class*/
+.logo {
+  margin-top: 5px;
+}
+/* This is for the main container class */
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}
