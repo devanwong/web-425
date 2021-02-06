@@ -70,6 +70,10 @@ export class HomeComponent implements OnInit {
           console.log('its an C+')
           gpa += 2.30;
           break;
+        case 'C':
+          console.log('its an C')
+          gpa += 2.00;
+          break;
         case 'C-':
           console.log('its a C-')
           gpa += 1.70;
