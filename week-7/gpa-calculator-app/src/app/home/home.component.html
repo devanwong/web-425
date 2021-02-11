@@ -1,0 +1,68 @@
+<!-- This is the home html page -->
+<!-- This is the flex layout -->
+<div fxLayout="row wrap" fxLayoutGap="20px">
+
+  <!-- Two column -->
+
+  <!-- Left column | This is the grade form -->
+  <div class="grade-form" fxFlex>
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Grade Entry</mat-card-title>
+      <mat-card-content>
+        <!-- This is where the form starts | added the form group and submit event handler coming from the ts file. -->
+        <form [formGroup]="transcriptForm" (ngSubmit)="onSubmit($event);transcriptForm.reset()" fxLayout="column" fxLayoutGap="16px">
+          <mat-form-field fxFlex appearance="fill">
+            <!-- This is where you type the course -->
+            <mat-label>Course</mat-label>
+            <!-- formControl name saves and pushed value of the course name  home.component. -->
+            <input type="text" id="txtCourse" name="txtCourse" matInput formControlName="course" />
+          </mat-form-field>
+          <mat-form-field fxFlex appearance="fill">
+            <!-- This is where is displays your the grade -->
+            <mat-label>Grade</mat-label>
+             <!-- formControl name save and pushed value of the grade name  home.component. -->
+            <mat-select formControlName="grade" required name="selectGrade">
+              <!-- ngFor is the for loop that iterates over selectable grades. homecomponent.ts  -->
+              <mat-option *ngFor="let grade of selectableGrades" [value]="grade">
+                {{ grade }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- This is a button to save the form - function found in ts file. -->
+          <button id="btnSave" mat-raised-button color="primary" [disabled]="!transcriptForm.valid">Save</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+  <!-- Right column  | This is the grade summary -->
+  <div class="grade-summary" fxFlex>
+    <!-- This button will clear the entries -->
+    <button mat-button color="primary" (click)="clearEntries()">Clear Transcript</button>
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Transcript</mat-card-title>
+      <mat-card-content>
+        <!-- This will display the grade summaries. this will assign variables as input values  -->
+        <app-grade-summary *ngFor="let entry of transcriptEntries" [course]="entry.course" [grade]="entry.grade"></app-grade-summary>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<br /><br />
+
+<!-- This will display the GPA -->
+<div fxLayout="column" fxLayoutGap="20px">
+  <div fxFlex class="gpa">
+    <!-- This button will calculate the results. -->
+    <button mat-button color="primary" (click)="calculateResults()">Calculate GPA</button>
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title style="text-align: center;">
+        <!-- This will displat the gpaTotal -->
+        <!-- This is the parent component. but using the childs selector -->
+        GPA: <app-gpa [gpaTotal]="gpaTotal"></app-gpa>
+      </mat-card-title>
+    </mat-card>
+  </div>
+</div>
