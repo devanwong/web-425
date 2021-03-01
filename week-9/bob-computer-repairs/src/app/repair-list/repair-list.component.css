@@ -1,0 +1,11 @@
+/* This is SCSS file for book-list.component */
+
+/* styling the link to change the cursor */
+.a-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* styling the link when hover to be underlined. */
+.a-link:hover {
+  text-decoration: underline;
+}

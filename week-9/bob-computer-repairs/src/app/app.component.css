@@ -1,0 +1,11 @@
+/* This is for the app.component.css file */
+/* This is for the logo */
+.logo {
+  margin-top: 5px;
+}
+/* This is for the main container */
+.main-container {
+  padding-top: 25px;
+  width: 80%;
+  margin: 0 auto;
+}

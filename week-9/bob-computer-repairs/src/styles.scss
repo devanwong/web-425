@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+// This imports the dark theme
+@import './theme';
+
+// standard css
+html, body {
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+// class in the titles and headlines in the application
+.blue {
+  color: #2196F3;
+}
+
+.green {
+  color: #66BB6A;
+}
+
+// Used if there are links.
+.attribution-link {
+  text-decoration: none;
+  color: white;
+}
+// Used if someone hover the link
+.attribution-link:hover {
+  text-decoration: underline;
+}
+
+// Icons are used on the contact.html
+.card-title-icon {
+  text-align: center;
+
+}
+
+.card-title-icon, .mat-icon {
+  font-size: 72px;
+}
+
+.align-center {
+  text-align: center;;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

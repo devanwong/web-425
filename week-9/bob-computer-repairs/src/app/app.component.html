@@ -1,0 +1,38 @@
+<!-- This is the app.component html -->
+<!-- Start of Mat-toolbar  -->
+<!-- mat-toolbar & mat-toolbar-row was imported through MatToolbarModule declared in app.module.ts-->
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <!-- This is for the logo -->
+    <div class="logo">
+      <img src="../assets/logo.png" alt="" height="50">
+    </div>
+    <!-- This is for the application links -->
+    <div style="width: 80%">
+      <!-- fxLayout was imported through FlexLayoutModule declared in app.module.ts-->
+      <div fxLayout="row wrap" fxLayoutAlign="end start">
+        <!-- mat-button was imported through MatButtonModule declared in app.module.ts -->
+        <button mat-button routerLink="/repair-list">Repair List</button>
+        <button mat-button routerLink="/contact">Contact</button>
+        <button mat-button routerLink="/about">About</button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- End of Mat-toolbar -->
+<br />
+
+<div fxLayout="row wrap">
+  <!--this tells Angular flex-layout that this is a flex element under a flex-row-->
+  <div fxFlex>
+    <!-- mat-card & mat-card-title &  mat-card-content was imported through MatCardModule declared in app.module.ts-->
+    <mat-card class="main-container">
+      <mat-card-title class="blue">{{ assignment }}</mat-card-title>
+      <br /><br />
+      <mat-card-content>
+       <!-- router-outlet was imported through AppRoutingModule declared in app.module.ts -->
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

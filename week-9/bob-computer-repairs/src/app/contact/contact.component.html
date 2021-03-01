@@ -1,0 +1,41 @@
+<!-- This is the contact component.html page  -->
+<div fxLayout="row wrap">
+  <!-- Left Column -->
+  <!-- fxFlex was imported through FlexLayoutModule declared in app.module.ts  -->
+  <div fxFlex>
+    <mat-card class="mat-elevation-z0">
+    <!-- mat-card-title & mat-card-content was imported through MatCardModule declared in app.module.ts & mat-icon was imported through MatIconModule declared in app.module.ts-->
+    <mat-card-title class="card-title-icon">
+      <!-- This will output an actual icon -->
+      <mat-icon color="primary">navigation</mat-icon>
+    </mat-card-title>
+      <br/>
+    <mat-card-content class="align-center">
+      <p>123 Legoland Ave</p>
+      <p>San Diego, California</p>
+    </mat-card-content>
+  </mat-card>
+  </div>
+  <!-- Right Column -->
+  <!-- fxFlex was imported through FlexLayoutModule declared in app.module.ts  -->
+  <div fxFlex>
+    <mat-card class="mat-elevation-z0">
+      <!-- mat-card-title & mat-card-content was imported through MatCardModule declared in app.module.ts & mat-icon was imported through MatIconModule declared in app.module.ts-->
+      <mat-card-title class="card-title-icon">
+        <!-- This will output an actual icon -->
+        <mat-icon color="primary">phone</mat-icon>
+      </mat-card-title>
+        <br/>
+        <mat-card-content class="align-center">
+          <p>M-F: 8:30AM-6:30PM</p>
+          <p>Direct: 123-123-1234</p>
+        </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<br /><br /><br /><br />
+<div fxLayout="column">
+    <p style="text-align: center">
+      If you have any questions please feel free to call or <a class="attribution-link" href="mailto:devan.wong@yahoo.com">email</a> us.
+    </p>
+</div>

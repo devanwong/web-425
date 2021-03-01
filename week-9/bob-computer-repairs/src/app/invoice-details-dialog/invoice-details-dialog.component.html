@@ -1,0 +1,36 @@
+<!-- This is the invoice details component  -->
+<!-- This is the mat-card -->
+<mat-card class="mat-elevation-z8">
+  <!-- This is the title for the invoice  -->
+  <mat-card-title class="green">Invoice Summary</mat-card-title>
+  <p>Order date: {{ this.todayDate | date }}</p>
+  <br />
+  <!-- Divider -->
+  <mat-divider [inset]="true"></mat-divider>
+  <!-- This is the main content -->
+  <mat-card-content>
+    <div fxLayout class="invoice-details">
+      <mat-list>
+        <!-- This will iterate through repairs array that are selected and display them -->
+        <mat-list-item *ngFor="let repair of repairs">
+          <!-- This is the item, and the price  -->
+          <p>{{ repair.item }} {{ repair.price | currency }}</p>
+        </mat-list-item>
+        <!-- Divider -->
+        <mat-divider [inset]="true"></mat-divider>
+        <!-- This is the total price including labors and cost. -->
+        <mat-list-item>
+          <p>Total Price: {{ totalPrice | currency }} </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </mat-card-content>
+  <!-- This is the confirm button that will close to dialog box -->
+  <mat-card-actions align="end">
+    <button mat-raised-button color="accent" matDialogClose="confirm">Confirm</button>
+  </mat-card-actions>
+  <br />
+</mat-card>
+
+
+

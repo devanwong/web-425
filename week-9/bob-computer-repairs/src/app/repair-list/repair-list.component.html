@@ -1,0 +1,64 @@
+<!-- This is the repair-list component -->
+<div fxLayout="row wrap" fxLayoutGap="20px" style="margin:0 auto">
+  <div class="repair-form" style="width:600px; margin: 0 auto">
+    <mat-card class="mat-elevation-z8" style="width:100%; margin: 0 auto">
+      <!-- This is the headline  -->
+      <mat-card-title class="green">Services</mat-card-title><br />
+
+      <mat-card-content>
+        <!-- The form starts here. -->
+        <form fxLayout="column" [formGroup]="repairForm" (ngSubmit)="onSubmit(); repairForm.reset();">
+          <mat-list fxLayout="column" fxLayoutGap="10px">
+            <!-- This will iterate with the populated JSON in the ts file -->
+            <mat-list-item  *ngFor="let repair of repairs_list">
+              <!-- This will give you the check box  -->
+              <mat-checkbox
+              (change)="isChecked(repair)"
+              >
+              <!-- This is display the json data -->
+              {{ repair.item }} {{ repair.price | currency }}
+              </mat-checkbox>
+            </mat-list-item>
+          </mat-list>
+
+          <!-- Divider -->
+          <br /><br />
+          <mat-divider [inset]="true"></mat-divider>
+          <br /><br />
+
+          <!-- This is the additional fees  -->
+          <mat-card-title  class="green" >Standard Fees:</mat-card-title>
+          <br />
+          <!-- This is the parts value -->
+          <h3>Parts:</h3>
+          <mat-form-field fxFlex appearance="fill">
+            <!-- This is the placeholder  -->
+            <mat-label>Enter Value ...</mat-label>
+            <!-- This is where you input the value of money  -->
+            <input type="number" name="" matInput formControlName="parts">
+          </mat-form-field>
+          <br />
+          <!-- This is the input for the labor at $50  -->
+          <h3>Labor:</h3>
+          <mat-form-field fxFlex appearance="fill">
+            <!-- This is the place holder  -->
+            <mat-label>Hours of Labor @ $50.00 ....</mat-label>
+            <!-- This is where you input the value number of hours inserted  -->
+            <input type="number" name="" matInput formControlName="labor">
+          </mat-form-field>
+
+          <!-- Divider -->
+          <br /><br />
+          <mat-divider [inset]="true"></mat-divider>
+          <br /><br />
+
+           <!-- This is the button you press to calculate and get the invoice summary. -->
+          <mat-card-actions align="end">
+            <button mat-raised-button color="primary">Calculate</button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

@@ -1,0 +1,35 @@
+<!-- This is the book-list component.html page  -->
+  <!-- NGIF checks the book length of 0 -->
+  <ng-container *ngIf="books.length === 0">
+    <!-- The spinner will show when the books array is 0 -->
+    <mat-spinner></mat-spinner>
+  </ng-container>
+  <!-- When the book has 1 it will display the cards -->
+  <div *ngIf="books.length > 0">
+    <!-- {books.length} to set the number of books we have in our favorites list  -->
+    <h2 class="green">
+      Top {{books.length}} Favorite Book
+    </h2>
+    <div class="grid-container">
+      <!-- This is the start of the for look for books from the api -->
+      <ng-container *ngFor="let book of books">
+        <mat-card class="grid-container__item mat-elevation-z8">
+          <mat-card-title>
+            <!-- This displays the book title. -->
+            <a class="grid-container__ahref blue" (click)="showBookDetails(book.isbn)">{{ book.title }}</a>
+          </mat-card-title><br />
+          <mat-card-content>
+            <!-- This is where the api is getting pulled in  -->
+            <mat-list>
+              <!-- This will display the isbn -->
+              <mat-list-item>ISBN: {{ book.isbn }}</mat-list-item>
+              <!-- This will display number of pages -->
+              <mat-list-item>Pages: {{ book.numOfPages }}</mat-list-item>
+              <!-- This will display the author. -->
+              <mat-list-item>Authors: {{ book.author.join(',')}}</mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+    </div>
+  </div>
